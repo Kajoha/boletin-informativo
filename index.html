@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Example</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: "Roboto", sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .display-body {
+            flex-direction: column;
+        }
+
+        .card {
+            width: 80%;
+            max-width: 900px;
+            display: flex;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .card img {
+            width: 40%;
+            /* Ancho de la imagen */
+            height: auto;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+            flex: 1;
+            color: #ffffff;
+            /* El contenido de la tarjeta ocupa el espacio restante */
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .card-description {
+            font-size: 1rem;
+        }
+
+        .card-reverse {
+            flex-direction: row-reverse;
+        }
+
+        .card-color01 {
+            background-color: #2c2c2e;
+        }
+
+        .card-color02 {
+            background-color: #1758a0;
+        }
+
+        .card-color03 {
+            background-color: #5297d1;
+        }
+
+        .card-color04 {
+            background-color: #93b9e3;
+        }
+
+        /*Header*/
+        .img-header {
+            width: 60%;
+        }
+
+        .margin-top-element {
+            margin-top: 40px;
+        }
+
+        /*Card logos*/
+
+        .logo-wrapper {
+            flex-direction: column;
+        }
+
+        .logo-container {
+            display: flex;
+            flex-direction: row;
+            width: 70%;
+        }
+
+        .logo-container img {
+            width: 50%;
+        }
+
+        .back-video {
+            background-color: #2c2c2e;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer-content {
+            background-color: #2c2c2e;
+            width: 100%;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer-info {
+            font-weight: 800;
+            color: #ffffff;
+            border: 2px solid white;
+            padding: 5px 15px;
+
+        }
+
+        .footer-info a {
+            color: #ffffff;
+        }
+
+        /* Media query para dispositivos móviles */
+        @media only screen and (max-width: 600px) {
+            .card {
+                flex-direction: column;
+                /* Cambio la dirección a columna en dispositivos móviles */
+            }
+
+            .card img {
+                width: 100%;
+                /* Ancho completo para la imagen en dispositivos móviles */
+            }
+
+            .logo-container {
+                flex-direction: column;
+            }
+
+            .logo-container img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body class="container display-body">
+
+    <header class="margin-top-element container">
+        <img class="img-header" src="https://enchantinghotels.com/imagenes-landing/01.jpg" alt="">
+    </header>
+    <section>
+        <div class="container display-body">
+            <div class="card margin-top-element  card-color01">
+                <img src="https://enchantinghotels.com/imagenes-landing/02.jpg" alt="Card Image">
+                <div class="card-content">
+                    <h2 class="card-title">Helado hecho en casa con aromaterapia
+                        al check-in</h2>
+                    <p class="card-description">Al realizar el check-in, los clientes serán recibidos con un
+                        delicioso helado hecho en casa de fruta de temporada,
+                        acompañada de toallas con aroma terapéutico. Una
+                        manera perfecta de dar la bienvenida y refrescar sus
+                        sentidos.</p>
+                </div>
+            </div>
+            <div class="card margin-top-element card-reverse  card-color02">
+                <img src="https://enchantinghotels.com/imagenes-landing/03.jpg" alt="Card Image">
+                <div class="card-content">
+                    <h2 class="card-title">Clases de yoga en la playa
+                        (Lun, Mié, Vie)</h2>
+                    <p class="card-description">Clases de yoga complementarias los lunes, miércoles y
+                        viernes. Una excelente manera de conectar con la
+                        naturaleza y comenzar el día con energía positiva.</p>
+                </div>
+            </div>
+            <div class="card margin-top-element  card-color03">
+                <img src="https://enchantinghotels.com/imagenes-landing/04.jpg" alt="Card Image">
+                <div class="card-content">
+                    <h2 class="card-title">Fogata en la playa para observación
+                        de estrellas (mar, jue, sáb)</h2>
+                    <p class="card-description">Disfruta de una fogata de 8:00 a 9:00 pm en la playa los
+                        martes, jueves y sábados, creando el ambiente perfecto
+                        para la observación de estrellas con nuestro telescopio.
+                        Una experiencia única bajo el cielo estrellado.</p>
+                </div>
+            </div>
+            <div class="card margin-top-element card-reverse card-color04">
+                <img src="https://enchantinghotels.com/imagenes-landing/05.jpg" alt="Card Image">
+                <div class="card-content">
+                    <h2 class="card-title">Amenidad adicional:
+                        tour down nocturno</h2>
+                    <p class="card-description">Cada noche, colocamos una nota personalizada,
+                        adornada con un mensaje reconfortante y edificante,
+                        acompañada de una deliciosa cajeta típica para endulzar
+                        la experiencia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="margin-top-element back-video">
+        <video width="100%" height="360" controls>
+            <source src="tu-video.mp4" type="video/mp4">
+            <source src="tu-video.webm" type="video/webm">
+            Tu navegador no soporta la etiqueta de video.
+        </video>
+    </section>
+
+    <section class="container logo-wrapper margin-top-element">
+        <div class="logo-container">
+            <img src="https://enchantinghotels.com/imagenes-landing/06.jpg" alt="">
+            <img src="https://enchantinghotels.com/imagenes-landing/07.jpg" alt="">
+        </div>
+        <div class="logo-container">
+            <img src="https://enchantinghotels.com/imagenes-landing/08.jpg" alt="">
+            <img src="https://enchantinghotels.com/imagenes-landing/09.jpg" alt="">
+        </div>
+    </section>
+
+    <footer class="margin-top-element footer-content">
+        <div class="container footer-info">
+
+            <p>Click aquí para descargar <a target="_blank"
+                    href="https://enchantinghotels.com/mailings2023/enchanting_links2023.html">fotos</a> y <a
+                    target="_blank" href="https://enchantinghotels.com/net/">tarifas</a> </p>
+
+
+        </div>
+    </footer>
+
+</body>
+
+</html>
